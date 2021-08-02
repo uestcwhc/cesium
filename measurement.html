@@ -31,7 +31,9 @@
 
 
     var tileset = scene.primitives.add(new Cesium.Cesium3DTileset({
-      url: 'Tileset/tileset.json'
+      // url: 'Tileset/tileset.json'
+      // url: 'dayanta/tileset.json'
+      url: 'Sansshui_Cesium0108/Sansshui_Cesium0108/tileset.json'
     }));
     tileset.readyPromise.then(function() {
       // console.log(tileset);
@@ -96,6 +98,7 @@
       if (meters >= 1000) {
           return (meters / 1000).toFixed(1) + ' км';
       }
+      console.log("水平距离"+meters);
       return meters + ' м';
     };
 
@@ -105,6 +108,7 @@
       if (meters >= 1000) {
           return (meters / 1000).toFixed(1) + ' км';
       }
+      console.log("垂直高度差"+meters.toFixed(2));
       return meters.toFixed(2) + ' м';
     };
 
@@ -118,6 +122,7 @@
       if (meters >= 1000) {
           return (meters / 1000).toFixed(1) + ' км';
       }
+      console.log("直线距离"+meters.toFixed(2));
       return meters.toFixed(2) + ' м';
     };
 
